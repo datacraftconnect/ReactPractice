@@ -1,0 +1,37 @@
+|
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="react-root"></div>
+    <!-- using vanilla JS - imperative programming -->
+    <script type="text/javascript">
+        let root = document.getElementById("root")
+        let head1 = document.createElement("h1")
+        head1.innerText = "React Intro"
+        //passing head1 to root node
+        root.appendChild(head1)  
+    </script>
+    <!-- using React JS - declarative programming - can create project via CDN & Build Tool like CRA(create react App) & vite(most popular)
+    Via CDN - simplest way to get started with React—no npm, no webpack, no create-react-app.
+    For creating react with CDN we need React, ReactDOM, Babel. Babel is a compiler that converts Jax file to Js inorder for browser to understand.
+    Steps: Load React and ReactDOM from CDN > Use Babel to compile JSX in the browser > Define a simple App component > Render it into the #root div -->
+    <script type="text/jsx">
+    let root1 = document.getElementById("react-root");
+
+    ReactDOM.render( <h1>Project SetUp</h1>, root1 )
+
+    </script>
+</body>
+
+</html>
